@@ -1,5 +1,3 @@
-from fastapi import Body, FastAPI, HTTPException, status, Request
-from pydantic import BaseModel
 from database import repo_create_menu, repo_gimme_burger
 
 app = FastAPI()
