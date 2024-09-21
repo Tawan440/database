@@ -24,7 +24,6 @@ class DataBaseManager:
     def create_databases(self) -> None:
         Base.metadata.create_all(self.engine)  # Create tables based on Base metadata
 
-# Initialize database manager and create tables
 DbManager = DataBaseManager()
 DbManager.create_databases()  # Ensure this is called to create tables
 NewSession = DbManager.get_session()
