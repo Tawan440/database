@@ -4,16 +4,15 @@ import asyncio
 
 TOKEN = '7756622464:AAHvMfWP9nuMO2cE0V24zAbikMhhD0bNdgU'
 
-bot = Bot(token=TOKEN)
-
-dp = Dispatcher()
+def some_func():
+    pass
 
 async def main():
-    await dp.start_polling(bot)
+    bot = Bot(token=TOKEN)
+    dp = Dispatcher()
     
+    some_func()
     
-asyncio.run(main())
-
-@dp.message
-async def handle_message(message: Message):
-    await message.answer(message.text)
+    @dp.message()
+    async def echo(message: Message):
+        await message.answer
